@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<HTML>
+   <HEAD>
+      <TITLE>Employees List!</TITLE>
+      <style>
+         table {
+         border-collapse: collapse;
+         width: 100%;
+         }
+         th,
+         td {
+         padding: 8px;
+         text-align: left;
+         }
+      </style>
+   </HEAD>
+   <BODY>
+      <BR/>
+      <BR/>
+      <center>
+         <font size="5" color="red">
+         <B>Employee list given below:-</B>
+         </font>
+         <BR/> #set( $count = 0 )
+         <table >
+            <tr>
+               #foreach( $emp in $empList )
+               <TD>$emp.id) $emp.name</TD>
+               #set( $count = $count + 1 )
+               #if($count %2 == 0)               
+            </tr>
+            <tr>
+               #end
+               #end
+            </tr>
+         </table>
+      </center>
+   </BODY>
+</HTML>
